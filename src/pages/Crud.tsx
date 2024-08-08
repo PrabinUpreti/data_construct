@@ -8,7 +8,7 @@ interface ITitle {
 export const Crud = ({ title }: ITitle) => {
   useEffect(() => {
     document.title = `${title}`;
-  }, [title]);
+  }, []);
 
   <Helmet>{`${title}`}</Helmet>;
 

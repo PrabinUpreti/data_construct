@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { MoreHorizontal } from "lucide-react";
+import { MdAdd } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 export const columns: ColumnDef<TEmployee>[] = [
   {
@@ -62,11 +64,20 @@ export const columns: ColumnDef<TEmployee>[] = [
 ];
 
 export const CrudTable = () => {
+  const navigate = useNavigate();
   const { data } = useGetEmployeeQuery(``);
   console.log(data);
 
   return (
-    <div className="container mx-auto py-10 flex">
+    <div className="container mx-auto py-10 flex flex-col">
+      <div
+        className="self-end p-2 mb-2 text-2xl cursor-pointer font-black rounded-md bg-blue-700 "
+        onClick={() => {
+          navigate("/crud/create");
+        }}
+      >
+        <MdAdd />
+      </div>
       <DataTable columns={columns} data={data ? data : []} />
     </div>
   );

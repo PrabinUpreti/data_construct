@@ -20,6 +20,14 @@ export const privateRoutes = [
     crumbs: () => [{ label: { key: `crud`, name: `CRUD` }, path: `/` }],
   },
   {
+    path: "/crud/create",
+    element: HomePage,
+    pageTitle: pageTitles.welcomePage,
+    crumbs: () => [
+      { label: { key: `welcome`, name: `Welcome` }, path: `welcome` },
+    ],
+  },
+  {
     path: "/welcome",
     element: Welcome,
     pageTitle: pageTitles.welcomePage,
