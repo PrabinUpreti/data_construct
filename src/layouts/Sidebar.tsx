@@ -6,7 +6,7 @@ import {
 } from "@/components/custom/common/icons";
 import { removeAuthToken } from "@/redux/appSlice";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Sidebar = () => {
   const dispatch = useDispatch();
@@ -25,35 +25,35 @@ export const Sidebar = () => {
             </div>
             <ul className="space-y-2 h-96 font-medium flex flex-col items-stretch">
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   <HomePageIcon />
                   <span className="ms-3">Home Page</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/employee"
+                <Link
+                  to="/employee"
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   <EmployeeIcon />
                   <span className="flex-1 ms-3 whitespace-nowrap">
                     Employee
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/welcome"
+                <Link
+                  to="/welcome"
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   <WelcomePageIcon />
                   <span className="flex-1 ms-3 whitespace-nowrap">
                     Welcome Page
                   </span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

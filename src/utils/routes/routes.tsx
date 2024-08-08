@@ -12,20 +12,25 @@ export const privateRoutes = [
     path: "/",
     element: HomePage,
     pageTitle: pageTitles.homePage,
-    crumbs: () => [{ label: { key: `home`, name: `Home` }, path: `/` }],
+    crumbs: () => [{ label: { key: `Home`, fallback: `` }, path: `/` }],
   },
   {
     path: "/employee",
     element: Employee,
     pageTitle: pageTitles.employeePage,
-    crumbs: () => [{ label: { key: `employee`, name: `Employee` }, path: `/` }],
+    crumbs: () => [
+      { label: { key: `Employee`, fallback: `` }, path: `/employee` },
+    ],
   },
   {
     path: "/employee/create",
     element: CreatePage,
     pageTitle: pageTitles.createPage,
     crumbs: () => [
-      { label: { key: `create`, name: `Create` }, path: `create` },
+      {
+        label: { key: `Create`, fallback: `Create` },
+        path: `/employee/create`,
+      },
     ],
   },
   {
@@ -33,7 +38,7 @@ export const privateRoutes = [
     element: Welcome,
     pageTitle: pageTitles.welcomePage,
     crumbs: () => [
-      { label: { key: `welcome`, name: `Welcome` }, path: `welcome` },
+      { label: { key: `Welcome`, fallback: `Welcome` }, path: `/welcome` },
     ],
   },
 ];
@@ -54,8 +59,8 @@ export const routes = [
     crumbs: () => [
       {
         label: {
-          key: `home`,
-          name: "Home",
+          key: `Data Construct`,
+          fallback: "",
         },
         path: `/`,
       },
