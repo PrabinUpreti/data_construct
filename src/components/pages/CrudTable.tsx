@@ -48,12 +48,10 @@ export const columns: ColumnDef<TEmployee>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => console.log("Edit")}>
               <span className=" cursor-pointer">Edit</span>
             </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
-            >
+            <DropdownMenuItem onClick={() => console.log("Delete")}>
               <span className="text-red-400 cursor-pointer">Delete</span>
             </DropdownMenuItem>
           </DropdownMenuContent>

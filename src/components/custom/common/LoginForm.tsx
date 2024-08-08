@@ -35,6 +35,7 @@ export function ProfileForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [errorMssg, setErrorMsg] = useState("");
+  const [isDisable, setIsDisable] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -43,10 +44,12 @@ export function ProfileForm() {
     },
   });
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsDisable(true);
     const res = await useLoginRequest(values);
-    console.log(res?.data?.token);
     if (!res) {
       setErrorMsg("Incorrect username or password");
+      setIsDisable(false);
+
       setTimeout(() => {
         setErrorMsg("");
       }, 3000);
@@ -55,6 +58,7 @@ export function ProfileForm() {
       setErrorMsg("");
       dispatch(setAuthToken(res?.data?.token));
       navigate("/welcome");
+      setIsDisable(false);
     }
   }
 
@@ -88,7 +92,7 @@ export function ProfileForm() {
           )}
         />
         <p className="text-red-600">{errorMssg}</p>
-        <Button className="mt-0" type="submit">
+        <Button className="mt-0 " type="submit" disabled={isDisable}>
           Login
         </Button>
       </form>
