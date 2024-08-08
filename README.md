@@ -31,7 +31,7 @@
 git clone https://github.com/PrabinUpreti/data_construct.git
 ```
 
-> Install node packages
+> change to project directory and Install node packages
 
 ```
 npm i
