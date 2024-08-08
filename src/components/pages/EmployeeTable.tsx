@@ -63,7 +63,7 @@ export const columns: ColumnDef<TEmployee>[] = [
   },
 ];
 
-export const CrudTable = () => {
+export const EmployeeTable = () => {
   const navigate = useNavigate();
   const { data } = useGetEmployeeQuery(``);
   console.log(data);
@@ -71,9 +71,9 @@ export const CrudTable = () => {
   return (
     <div className="container mx-auto py-10 flex flex-col">
       <div
-        className="self-end p-2 mb-2 text-2xl cursor-pointer font-black rounded-md bg-blue-700 "
+        className="self-end p-2 mb-2 text-2xl cursor-pointer text-white font-black rounded-md bg-blue-700 "
         onClick={() => {
-          navigate("/crud/create");
+          navigate("/employee/create");
         }}
       >
         <MdAdd />

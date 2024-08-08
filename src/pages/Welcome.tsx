@@ -1,6 +1,16 @@
-import React from "react";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet";
+interface ITitle {
+  title: string;
+}
 
-const Welcome = () => {
+export const Welcome = ({ title }: ITitle) => {
+  useEffect(() => {
+    document.title = `${title}`;
+  }, []);
+
+  <Helmet>{`${title}`}</Helmet>;
+
   return (
     <div className="containsser">
       <iframe

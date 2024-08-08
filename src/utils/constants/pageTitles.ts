@@ -1,6 +1,7 @@
 export const pageTitles = {
   loginPage: "DC | Login",
   welcomePage: "DC | Welcome",
-  crudPage: "DC | CRUD",
+  employeePage: "DC | Employee",
   homePage: "DC | Home",
+  createPage: "DC | Create",
 };

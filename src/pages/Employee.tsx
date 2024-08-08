@@ -1,16 +1,16 @@
-import { CrudTable } from "@/components/pages/CrudTable";
+import { EmployeeTable } from "@/components/pages/EmployeeTable";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 interface ITitle {
   title: string;
 }
 
-export const Crud = ({ title }: ITitle) => {
+export const Employee = ({ title }: ITitle) => {
   useEffect(() => {
     document.title = `${title}`;
   }, []);
 
   <Helmet>{`${title}`}</Helmet>;
 
-  return <CrudTable />;
+  return <EmployeeTable />;
 };
