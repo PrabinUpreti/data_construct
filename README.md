@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# App Screenshots
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+### Login Screen
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![alt text](/public/3.png)
 
-## Expanding the ESLint configuration
+### Welcome Screen
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![alt text](/public/2.png)
 
-- Configure the top-level `parserOptions` property like this:
+### Data Table Screen
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+![alt text](/public/1.png)
+
+### dark theme
+
+![alt text](/public/4.png)
+![alt text](/public/5.png)
+
+# Run Application
+
+---
+
+## step 1
+
+> Clone the project from git repo
+
+```
+git clone https://github.com/PrabinUpreti/data_construct.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+> Install node packages
+
+```
+npm i
+```
+
+> run the application from project directory
+
+```
+npm run dev
+```

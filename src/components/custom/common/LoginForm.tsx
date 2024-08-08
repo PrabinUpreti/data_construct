@@ -54,7 +54,7 @@ export function ProfileForm() {
       toast.success("Logged In Sucessfully", { position: "bottom-right" });
       setErrorMsg("");
       dispatch(setAuthToken(res?.data?.token));
-      navigate("/welcome");
+      navigate("/crud");
     }
   }
 
